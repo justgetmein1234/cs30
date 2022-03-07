@@ -1,0 +1,74 @@
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+
+public class DivisibleBy3 implements ActionListener {
+	JFrame frame;
+	JPanel contentPane;
+	JLabel enterLabel;
+	JLabel divisibilityLabel;
+	JButton button;
+	JTextField integerInput;
+	
+	String divisible = "";
+	
+	public DivisibleBy3 () {
+		frame = new JFrame("DivisibleBy3");
+		
+		contentPane = new JPanel();
+		contentPane.setLayout(new
+			GridLayout(2, 2, 0, 5));
+			
+		enterLabel = new JLabel("Enter The integer player.");
+		divisibilityLabel = new JLabel();
+		
+		button = new JButton("Check");
+		button.addActionListener(this);
+		
+		integerInput = new JTextField();
+		
+		frame.setContentPane(contentPane);
+
+		contentPane.add(enterLabel);
+		contentPane.add(integerInput);
+		contentPane.add(button);
+		contentPane.add(divisibilityLabel);
+		
+		frame.setSize(400, 400);
+		frame.setVisible(true);
+	}
+	
+	 public void actionPerformed(ActionEvent event) {
+		String eventName = event.getActionCommand();
+		
+		if (eventName.equals("Check")) {
+			int number;
+			
+			String integer = integerInput.getText();
+			number = Integer.parseInt(integer);
+			
+			if ((number % 3) == 0) {
+				String divisible = "";
+				divisibilityLabel.setText("Number is " + divisible + " divisible by 3.");
+			} else {
+			String divisible = "not";
+			divisibilityLabel.setText("Number is " + divisible + " divisible by 3.");
+			}
+		}
+	}
+	
+	private static void runGUI () {
+		JFrame.setDefaultLookAndFeelDecorated(true);
+		
+		DivisibleBy3 bibba = new DivisibleBy3 ();
+	}
+	
+	public static void main(String[] args) {
+		
+		javax.swing.SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				runGUI();
+			}
+		});
+	}
+}
