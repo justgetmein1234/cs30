@@ -12,17 +12,7 @@ public class Account {
 
   
 
- /**
-
-  * constructor
-
-  * pre: none
-
-  * post: An account has been created.
-
-  *
-
-  */
+ 
 
  public Account(double bal) {
 
@@ -36,15 +26,7 @@ public class Account {
 
  
 
- /**
-
-  * Returns the current balance.
-
-  * pre: none
-
-  * post: The account balance has been returned.
-
-  */
+ 
 
  public double getBalance() {
 
@@ -56,15 +38,7 @@ public class Account {
 
  
 
- /**
 
-  * A deposit is made to the account.
-
-  * pre: none
-
-  * post: The balance has been increased by the amount of the deposit.
-
-  */
 
  public void deposit(double amt) {
 
@@ -76,15 +50,6 @@ public class Account {
 
   
 
- /**
-
-  * A withdrawal is made from the account if there is enough money.
-
-  * pre: none
-
-  * post: The balance has been decreased by the amount withdrawn.
-
-  */
 
  public void withdrawal(double amt) {
 
@@ -104,17 +69,7 @@ public class Account {
 
   
 
- /**
-
-  * Returns a String that represents the Account object.
-
-  * pre: none
-
-  * post: A string representing the Account object has
-
-  * been returned.
-
-  */
+ 
 
  public String toString() {
 
