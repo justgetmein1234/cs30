@@ -26,7 +26,7 @@ public class findNAme {
         System.out.println("Enter a name to find: ");
         location = input.nextLine();
         if ((location != nameArray[MAX]))
-            System.out.println("Sorry, name cant find. ");
+            System.out.println("Sorry, name cant be find. ");
         else
             System.out.println(" " + location);
     }
